@@ -34,13 +34,13 @@ table.in[,2]=ifelse(nchar(table.in[,2])==1,
 table.in[,2:7]=paste(table.in[,2:7],"000000",sep="")
 table.in[,c(2:3,5:7)]=substr(table.in[,c(2:3,5:7)],1,6)
 table.in[,4]=substr(table.in[,4],1,7)
-table.in=paste(table.in[,1]," DMU ",
-               table.in[,2]," EFF ",
-               table.in[,3]," EFF.BC ",
-               table.in[,4]," BIAS ",
-               table.in[,5]," VAR ",
-               table.in[,6]," LCI ",
-               table.in[,7]," UCI ",sep="")
+table.in=paste(table.in[,1],"  ",
+               table.in[,2],"  ",
+               table.in[,3],"  ",
+               table.in[,4],"  ",
+               table.in[,5],"  ",
+               table.in[,6],"  ",
+               table.in[,7],"  ",sep="")
 
 outputfile=paste("output dea -cpo",".txt",sep="");
 write(table.in,outputfile)
